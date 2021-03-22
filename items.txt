@@ -1,0 +1,197 @@
+"RAW_MUTAGEN"
+  {
+    viewId = { "rawmutagen" }
+    name = "raw mutagen"
+    weight = 0.5
+    description = "Extracted genetic essentia, used in mutagenic recipes. Consumption can lead to unsafe physical and mental effects."
+    applyTime = 3
+    uses = 1
+    usedUpMsg = true
+	itemClass = OTHER
+    displayUses = false
+    price = 20
+	resourceId = "RAW_MUTAGEN"
+    effect = ChooseRandom {
+		  Name "Delicious green juice" Description "Do not drink this." 
+          Filter CreatureId "TEST_SUBJECT" AI Not Enemy -1 1 {
+		    Polymorph none none
+			ChooseRandom {
+				Permanent INSANITY
+				Permanent PANIC
+				Permanent RAGE
+			}
+		  }
+        }
+  }
+  
+Def OneTimeBoost()
+  NoAutoAssign EquipmentType COMBAT_ITEM AI And {} -1 1 AI And {} 0 1
+End
+  
+"ExperimentalSyringe"
+  {
+    viewId = { "mutasyringe_b" }
+    name = "experimental serum"
+    weight = 0.5
+    description = "Has unpredictable mutagenic effects on a test subject."
+    applyTime = 3
+    uses = 1
+    usedUpMsg = false
+    displayUses = false
+
+    price = 30
+    effect = {
+		  Name "Experimental syringe" Description "Mutates a test subject in unpredictable ways." 
+		  OneTimeBoost()
+		  Filter CreatureId "MIDMORPH" AI Not Enemy -1 1 {
+		    CreatureMessage "evolve!" "evolves!"
+		    ChooseRandom {
+			  Polymorph "WOLFMORPH" none
+			  Polymorph "BOARMORPH" none
+			  Polymorph "RATMORPH" none
+			  Polymorph "CHOOKMORPH" none
+			  Polymorph "COWMORPH" none
+			}
+		  }
+		  ChooseRandom {
+			Filter CreatureId "TEST_SUBJECT" AI Not Enemy -1 1 {
+				Polymorph "MIDMORPH" none
+			}
+			Filter CreatureId "TEST_SUBJECT" AI Not Enemy -1 1 {
+				Polymorph "MIDMORPH" none
+			}
+			Filter CreatureId "TEST_SUBJECT" AI Not Enemy -1 1 {
+				Polymorph "MIDMORPH" none
+			}
+			Filter CreatureId "TEST_SUBJECT" AI Not Enemy -1 1 {
+				ChooseRandom {
+					AddBodyPart WING 2 none Permanent FLYING
+					AddBodyPart ARM 2 none
+					AddBodyPart LEG 2 none
+					Permanent INSANITY
+					IncreaseAttr DEFENSE 3
+				    IncreaseAttr DAMAGE 3
+					{CreatureMessage "suffer a fatal cytokine storm!" "suffers a fatal cytokine storm!"
+					 Suicide DIE}
+				}
+			}
+			Filter CreatureId "TEST_SUBJECT" AI Not Enemy -1 1 {
+				ChooseRandom {
+					Polymorph "WOLF" none
+					Polymorph "GOAT" none
+					Polymorph "BOAR" none
+					Polymorph "DEER" none
+					Polymorph "CAVE_BEAR" none
+					Polymorph "KANGAROO" none
+					Polymorph "FOX" none
+					Polymorph "DOG" none
+					Polymorph "PIG" none
+					Polymorph "HORSE" none
+					Polymorph "CHICKEN" none
+				}
+				
+			}		  
+        }
+		}
+  }
+"BoosterSyringe"
+  {
+    viewId = { "mutasyringe_c" }
+    name = "booster serum"
+    weight = 0.5
+    description = "Evolves a morph into an apex version of itself with powerful abilties."
+    applyTime = 3
+    uses = 1
+    usedUpMsg = false
+    displayUses = false
+
+    price = 100
+    effect = {
+		OneTimeBoost()
+		Name "Boost morph" Description "Evolve a morph into a bigger, more powerful version of itself." 
+		Filter CreatureId "WOLFMORPH" AI Not Enemy -1 1 {
+			Polymorph "ALPHA_WOLF" none
+		}
+		Filter CreatureId "SHEEPMORPH" AI Not Enemy -1 1 {
+			Polymorph "WERESHEEP" none
+		}
+		Filter CreatureId "BOARMORPH" AI Not Enemy -1 1 {
+			Polymorph "WEREBOAR" none
+		}
+		Filter CreatureId "BOARMORPH" AI Not Enemy -1 1 {
+			Polymorph "WERECHOOK" none
+		}
+		Filter CreatureId "BOARMORPH" AI Not Enemy -1 1 {
+			Polymorph "WERECROC" none
+		}
+		Filter CreatureId "BOARMORPH" AI Not Enemy -1 1 {
+			Polymorph "WERECOW" none
+		}
+		ChooseRandom {
+			IncreaseAttr DEFENSE 3
+			IncreaseAttr DEFENSE 5
+			IncreaseAttr DAMAGE 3
+			IncreaseAttr DAMAGE 5
+			AddBodyPart ARM 2 none
+		}
+    }
+  }
+"CombatSyringe"
+  {
+    viewId = { "mutasyringe" }
+    name = "morph serum"
+    weight = 0.5
+    description = "Changes a humanoid into a basic morph permanently."
+    applyTime = 3
+    uses = 1
+    usedUpMsg = false
+    displayUses = false
+
+    price = 50
+    effect = {
+		OneTimeBoost()
+		Name "Morph serum" Description "Transform a test subject directly into a morph. Adverse outcomes no longer pose a threat." 
+		Filter CreatureId "TEST_SUBJECT" AI Not Enemy -1 1 {
+				ChooseRandom {
+					Polymorph "WOLFMORPH" none
+					Polymorph "BOARMORPH" none
+					Polymorph "CROCMORPH" none
+					Polymorph "SHEEPMORPH" none
+					Polymorph "COWMORPH" none
+					Polymorph "CHOOKMORPH" none
+					Polymorph "RATMORPH" none
+				}
+			}
+	}
+  }
+"AnimalSyringe"
+  {
+    viewId = { "mutasyringe" }
+    name = "animal serum"
+    weight = 0.5
+    description = "Changes a humanoid into a random creature permanently."
+    applyTime = 3
+    uses = 1
+    usedUpMsg = true
+    displayUses = false
+    price = 35
+    effect = {
+	OneTimeBoost()
+	Name "Animal syringe" Description "Transform a test subject directly into a morph." 
+	Filter CreatureId "TEST_SUBJECT" AI Not Enemy -1 1 {
+				ChooseRandom {
+					Polymorph "WOLF" none
+					Polymorph "GOAT" none
+					Polymorph "BOAR" none
+					Polymorph "DEER" none
+					Polymorph "CAVE_BEAR" none
+					Polymorph "KANGAROO" none
+					Polymorph "FOX" none
+					Polymorph "DOG" none
+					Polymorph "PIG" none
+					Polymorph "HORSE" none
+					Polymorph "CHICKEN" none
+				}
+        }
+	}
+  }

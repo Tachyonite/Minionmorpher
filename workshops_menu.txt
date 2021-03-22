@@ -1,0 +1,11 @@
+"serums"
+{
+  "MUTAGEN_LAB"
+  {
+	{{"RAW_MUTAGEN"}          6        "CORPSE" 1}
+	{{"ExperimentalSyringe"}    10        "RAW_MUTAGEN" 1 "basic mutagens"}
+	{{"AnimalSyringe"}          10        "RAW_MUTAGEN" 1 "advanced mutagens"}
+	{{"CombatSyringe"}          10        "RAW_MUTAGEN" 2 "advanced mutagens"}
+	{{"BoosterSyringe"}         20        "RAW_MUTAGEN" 5 "master mutagens"}
+  }
+}

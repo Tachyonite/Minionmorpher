@@ -1,0 +1,1 @@
+"RAW_MUTAGEN"           { RESOURCE    "raw mutagen"           { "rawmutagen" } }

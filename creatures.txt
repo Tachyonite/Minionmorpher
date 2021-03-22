@@ -1,0 +1,504 @@
+"KEEPER_SCIENTIST"
+  {
+    # Definitions in tiles.txt
+    viewId = { "keeperscientist1" }
+    # ViewId upgrades of Keepers are applied every 5 tech level increases
+    viewIdUpgrades = { { "keeperscientist2" } { "keeperscientist3" } { "keeperscientist4" } }
+    name = {
+      # The name gets changed appropriately to Keeper and Adventurer
+      name = "scientist"
+      # Definitions in name_generator.h
+      firstNameGen = "FIRST_MALE"
+      # Creature is always referred to as [FirstName] the [Creature name]
+      fullTitle = true
+    }
+    body = {
+      # One of Humanoid, HumanoidLike, Bird, FourLegged and NonHumanoid
+      # size is one of SMALL, MEDIUM, LARGE and HUGE, influences stuff like pushing boulders and being pushed
+      type = Humanoid LARGE
+    }
+    # attr_type.h
+    attr = {
+      DAMAGE 12
+      DEFENSE 12
+      SPELL_DAMAGE 20
+    }
+    # skill.h
+    skills = {
+      "LABORATORY" 0.5
+      "WORKSHOP" 1
+      "MUTAGEN_LAB" 0.5
+    }
+    # experience_type.h
+	spellSchools = { "mutagenic" }
+    maxLevelIncrease = {
+      MELEE 7
+      SPELL 12
+    }
+    aiType = RANGED
+    inventory = {
+      # Here comes a list of items. The format of each element is defined in creature_inventory.h
+      { "Robe"}
+      # Take a look a CYCLOPS for a more detailed example.
+    }
+  }
+"CONSTRUCTION_WORKER"
+  {
+    viewId = { "construction_worker" }
+    attr = {
+      DAMAGE 5
+      DEFENSE 10 
+    }
+    body = {
+      type = Humanoid MEDIUM
+    }
+    aiType = RANGED
+    noChase = true
+    cantEquip = true
+    skills = {
+      "DIGGING" 0.2
+    }
+    chatReactionFriendly = "talks about building"
+    chatReactionHostile = "\"Die!\""
+    permanentEffects = {
+      SPEED 1
+      NO_CARRY_LIMIT 1
+    }
+    name = {
+      name = "assistant"
+    }
+  }
+"TEST_SUBJECT"
+  {
+    viewId = { "testsubject" }
+    attr = {
+      DAMAGE 10
+      DEFENSE 10
+    }
+    body = {
+      type = Humanoid MEDIUM
+    }
+    chatReactionFriendly = "talks about experiments"
+    chatReactionHostile = "\"Die!\""
+    name = {
+      name = "test subject"
+      firstNameGen = "FIRST_MALE"
+    }
+    maxLevelIncrease = {
+      MELEE 7
+    }
+    hatedByEffect = HATE_HUMANS
+  }
+  
+"MIDMORPH"
+  {
+    viewId = { "midmorph" }
+    attr = {
+      DAMAGE 14
+      DEFENSE 12 
+    }
+    body = {
+      type = Humanoid MEDIUM
+      intrinsicAttacks = {
+        LEG  {{ itemType = { Intrinsic { "claws_attack" } "claws" 4 { attackType = HIT attackMsg = CLAW }} isExtraAttack = true }}
+        HEAD {{ itemType = { Intrinsic { "bite_attack" }  "fangs" 4 { attackType = BITE attackMsg = BITE }} isExtraAttack = true }}
+      }
+    }
+    maxLevelIncrease = {
+      MELEE 7
+    }
+    name = {
+      name = "mutant"
+      pluralName = "mutants"
+    }
+  }
+  
+"WOLFMORPH"
+  {
+    viewId = { "wolfmorph" }
+    attr = {
+      DAMAGE 18
+      DEFENSE 14 
+    }
+    body = {
+      type = Humanoid MEDIUM
+      intrinsicAttacks = {
+        LEG  {{ itemType = { Intrinsic { "claws_attack" } "claws" 7 { attackType = HIT attackMsg = CLAW }} isExtraAttack = true }}
+        HEAD {{ itemType = { Intrinsic { "bite_attack" }  "fangs" 6 { attackType = BITE attackMsg = BITE }} isExtraAttack = true }}
+      }
+    }
+    permanentEffects = {
+      NIGHT_VISION 1
+      EXPLORE_NOCTURNAL_SKILL 1
+    }
+    maxLevelIncrease = {
+      MELEE 12
+    }
+    name = {
+      name = "wolfmorph"
+      pluralName = "wolfmorphs"
+    }
+  }
+  
+"ALPHA_WOLF" inherit "WOLFMORPH"
+  {
+    viewId = { "alphawolf" }
+    attr = {
+      DAMAGE 30
+      DEFENSE 35 
+    }
+    body = {
+      type = Humanoid LARGE
+      intrinsicAttacks = {
+        LEG  {{ itemType = { Intrinsic { "claws_attack" } "claws" 10 { attackType = HIT attackMsg = CLAW }} isExtraAttack = true }}
+        HEAD {{ itemType = { Intrinsic { "bite_attack" }  "fangs" 10 { attackType = BITE attackMsg = BITE }} isExtraAttack = true }}
+      }
+    }
+    maxLevelIncrease = {
+      MELEE 15
+    }
+    name = {
+      name = "alpha wolf"
+      pluralName = "alpha wolves"
+    }
+  }
+"BOARMORPH"
+  {
+    viewId = { "boarmorph" }
+    attr = {
+      DAMAGE 16
+      DEFENSE 25 
+    }
+    body = {
+      type = Humanoid LARGE
+      intrinsicAttacks = {
+        HEAD {{ itemType = { Intrinsic { "bite_attack" }  "tusks" 12 { attackType = BITE attackMsg = BITE }} isExtraAttack = true }}
+      }
+    }
+    maxLevelIncrease = {
+      MELEE 15
+    }
+    name = {
+      name = "boarmorph"
+      pluralName = "boarmorphs"
+    }
+	skills = {
+      "LABORATORY" 0.7
+      "MUTAGEN_LAB" 0.7
+    }
+  }
+"WEREBOAR"
+  {
+    viewId = { "boarmorph" }
+    attr = {
+      DAMAGE 28
+      DEFENSE 40 
+    }
+    body = {
+      type = Humanoid LARGE
+      intrinsicAttacks = {
+        HEAD {{ itemType = { Intrinsic { "bite_attack" }  "tusks" 15 { attackType = BITE attackMsg = BITE }} isExtraAttack = true }}
+      }
+    }
+    maxLevelIncrease = {
+      MELEE 17
+    }
+    name = {
+      name = "wereboar"
+      pluralName = "wereboars"
+    }
+	skills = {
+      "LABORATORY" 0.7
+      "MUTAGEN_LAB" 0.7
+    }
+  }
+"RATMORPH"
+  {
+    viewId = { "ratmorph" }
+    attr = {
+      DAMAGE 15
+      DEFENSE 8
+	  SPELL_DAMAGE 16	  
+    }
+    body = {
+      type = Humanoid SMALL
+      intrinsicAttacks = {
+        HEAD {{ itemType = { Intrinsic { "bite_attack" }  "teeth" 3 { attackType = BITE attackMsg = BITE }} isExtraAttack = true }}
+      }
+    }
+	chatReactionFriendly = "talks about gnawing hunger"
+    chatReactionHostile = "\"Die!\""
+    aiType = RANGED
+    permanentEffects = {
+	  SWARMER 1
+	  SPEED 1
+    }
+    maxLevelIncrease = {
+      SPELL 7
+    }
+    name = {
+      name = "ratmorph"
+      pluralName = "ratmorphs"
+    }
+	skills = {
+      "WORKSHOP" 0.7
+	  "JEWELER" 0.2
+    }
+  }
+"WERERAT"
+  {
+    viewId = { "wererat" }
+    attr = {
+      DAMAGE 22
+      DEFENSE 10
+	  SPELL_DAMAGE 20	  
+    }
+    body = {
+      type = Humanoid SMALL
+      intrinsicAttacks = {
+        HEAD {{ itemType = { Intrinsic { "bite_attack" }  "teeth" 5 { attackType = BITE attackMsg = BITE }} isExtraAttack = true }}
+      }
+    }
+	chatReactionFriendly = "talks about gnawing hunger"
+    chatReactionHostile = "\"Die!\""
+    aiType = RANGED
+    permanentEffects = {
+	  SWARMER 1
+	  SPEED 1
+    }
+    maxLevelIncrease = {
+      SPELL 10
+    }
+    name = {
+      name = "wererat"
+      pluralName = "wererats"
+    }
+	skills = {
+      "WORKSHOP" 0.7
+	  "JEWELER" 0.2
+    }
+  }
+"CROCMORPH"
+  {
+    viewId = { "crocmorph" }
+    attr = {
+      DAMAGE 24
+      DEFENSE 24 
+    }
+    body = {
+      type = Humanoid LARGE
+	  intrinsicAttacks = {
+	    HEAD {{ itemType = { Intrinsic { "bite_attack" }  "crocodile chomp" 20 { attackType = BITE attackMsg = BITE victimEffect = { 0.1 Lasting BLEEDING  } } } isExtraAttack = true }}
+	  }
+    }
+    chatReactionFriendly = "hisses amicably."
+    chatReactionHostile = "\"Hisss!\""
+	permanentEffects = {
+      MELEE_RESISTANCE 1
+      SLOWED 1
+	  SWIMMING_SKILL 1
+    }
+    skills = {
+      "WORKSHOP" 0.3
+    }
+    maxLevelIncrease = {
+      MELEE 12
+    }
+    name = {
+      name = "crocmorph"
+    }
+  }
+"WERECROC"
+  {
+    viewId = { "werecroc" }
+    attr = {
+      DAMAGE 34
+      DEFENSE 34 
+    }
+    body = {
+      type = Humanoid LARGE
+	  intrinsicAttacks = {
+	    HEAD {{ itemType = { Intrinsic { "bite_attack" }  "crocodile chomp" 25 { attackType = BITE attackMsg = BITE victimEffect = { 0.1 Lasting BLEEDING  } } } isExtraAttack = true }}
+	  }
+    }
+    chatReactionFriendly = "hisses amicably."
+    chatReactionHostile = "\"Hisss!\""
+	permanentEffects = {
+      MELEE_RESISTANCE 1
+      SLOWED 1
+	  SWIMMING_SKILL 1
+    }
+    skills = {
+      "WORKSHOP" 0.5
+    }
+    maxLevelIncrease = {
+      MELEE 15
+    }
+    name = {
+      name = "werecroc"
+    }
+  }
+"CHOOKMORPH"
+  {
+    viewId = { "chookmorph" }
+    attr = {
+      DAMAGE 12
+      DEFENSE 12
+    }
+    body = {
+      type = Humanoid MEDIUM
+	  addBodyPart = {
+        WING 2
+      }
+    }
+    chatReactionFriendly = "clucks about seeds"
+    chatReactionHostile = "\"Die!\""
+    gender = FEMALE
+    aiType = RANGED
+    name = {
+      name = "chookmorph"
+    }
+	spells = { "hatch egg" }
+	
+    permanentEffects = {
+      COPULATION_SKILL 1
+    }
+  }
+"WERECHOOK"
+  {
+    viewId = { "chookmorph" }
+    attr = {
+      DAMAGE 20
+      DEFENSE 24
+    }
+    body = {
+      type = Humanoid MEDIUM
+	  addBodyPart = {
+        WING 2
+      }
+    }
+    chatReactionFriendly = "clucks about seeds"
+    chatReactionHostile = "\"Die!\""
+    gender = FEMALE
+    aiType = RANGED
+    name = {
+      name = "werechook"
+    }
+	spells = { "hatch egg" }
+	
+    permanentEffects = {
+      COPULATION_SKILL 1
+    }
+  }
+"SHEEPMORPH"
+  {
+    viewId = { "sheepmorph" }
+    attr = {
+      DAMAGE 15
+      DEFENSE 15
+    }
+    body = {
+      type = Humanoid MEDIUM
+	  intrinsicAttacks = {
+        HEAD {{ itemType = { Intrinsic { "fist_attack" }  "horns" 12 { attackType = HIT attackMsg = SWING }} isExtraAttack = true }}
+      }
+    }
+    chatReactionFriendly = "bleats about grass"
+    chatReactionHostile = "\"Die!\""
+    aiType = MELEE
+    name = {
+      name = "sheepmorph"
+    }
+	spells = { "ram" }
+  }
+"WERESHEEP"
+  {
+    viewId = { "weresheep" }
+    attr = {
+      DAMAGE 35
+      DEFENSE 35
+    }
+    body = {
+      type = Humanoid LARGE
+	  intrinsicAttacks = {
+        HEAD {{ itemType = { Intrinsic { "fist_attack" }  "horns" 15 { attackType = HIT attackMsg = SWING }} isExtraAttack = true }}
+      }
+    }
+    chatReactionFriendly = "bleats about grass"
+    chatReactionHostile = "\"Die!\""
+    aiType = MELEE
+    name = {
+      name = "weresheep"
+    }
+	spells = { "ram" "sheepify" }
+  }
+"CHOOK_EGG"
+  {
+    viewId = { "chookegg" }
+    attr = {
+      DAMAGE 0
+      DEFENSE 0 
+    }
+    body = {
+      type = NonHumanoid SMALL
+    }
+    permanentEffects = {
+      IMMOBILE 1
+      BLIND 1
+    }
+    chatReactionFriendly = "rattles, something is moving inside."
+    chatReactionHostile = "rattles, something is moving inside."
+    deathDescription = "cracks open, revealing a partly formed creature."
+    name = {
+      name = "egg"
+      pluralName = "eggs"
+    }
+  }
+"COWMORPH"
+  {
+    viewId = { "cowmorph" }
+    attr = {
+      DAMAGE 16
+      DEFENSE 22
+    }
+    body = {
+      type = Humanoid MEDIUM
+	  intrinsicAttacks = {
+	    HEAD {{ itemType = { Intrinsic { "bite_attack" }  "horns" 5 { attackType = HIT attackMsg = SWING victimEffect = { 0.1 Lasting BLEEDING  } } } isExtraAttack = true }}
+	  }
+    }
+    chatReactionFriendly = "moos about grass"
+    chatReactionHostile = "\"Die!\""
+	
+    gender = FEMALE
+    name = {
+      name = "cowmorph"
+    }
+	skills = {
+      "FORGE" 0.7
+    }
+  }
+"WERECOW"
+  {
+    viewId = { "werecow" }
+    attr = {
+      DAMAGE 34
+      DEFENSE 38
+    }
+    body = {
+      type = Humanoid LARGE
+	  intrinsicAttacks = {
+	    HEAD {{ itemType = { Intrinsic { "bite_attack" }  "horns" 8 { attackType = HIT attackMsg = SWING victimEffect = { 0.1 Lasting BLEEDING  } } } isExtraAttack = true }}
+	  }
+    }
+    chatReactionFriendly = "moos about grass"
+    chatReactionHostile = "\"Die!\""
+	
+    gender = FEMALE
+    name = {
+      name = "werecow"
+    }
+	skills = {
+      "FORGE" 0.7
+    }
+  }

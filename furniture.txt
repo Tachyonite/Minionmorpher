@@ -1,0 +1,197 @@
+"MUTAGEN_LAB"
+{
+  name = "mutagen lab"
+  viewId = { "mutagen_lab" }
+  blockMovement = true
+  usageTime = 5
+  canHideHere = true
+  strength = 80
+  requiresLight = true
+  destroyFX = { DESTROY_FURNITURE Rgb 120 120 120 255 }
+  usageFX = LABORATORY
+}
+"GOO_TUBE"
+  {
+   name = "science vat"
+   viewId = { "goo_tube" }
+   blockMovement = true
+   canHideHere = true
+   luxury = 0.4
+   strength = 50
+   lightEmission = 8.2
+   destroyFX = { DESTROY_FURNITURE Rgb 190 190 40 255 }
+  }
+"FLOOR_LAB_CONNECTED"
+  {
+   name = "lab floor"
+   viewId = { "lab_floor" }
+   layer = FLOOR
+   luxury = 0.3
+  }
+"FLOOR_LAB1"
+{
+  name = "lab floor"
+  viewId = { "lab_floor1" }
+  luxury = 0.3
+  layer = FLOOR
+}
+"FLOOR_LAB2" inherit "FLOOR_LAB1"
+{
+  viewId = { "lab_floor2" }
+}
+"FLOOR_LAB3" inherit "FLOOR_LAB1"
+{
+  viewId = { "lab_floor3" }
+}
+"FLOOR_LAB4" inherit "FLOOR_LAB1"
+{
+  viewId = { "lab_floor4" }
+}
+"FLOOR_LAB5" inherit "FLOOR_LAB1"
+{
+  viewId = { "lab_floor5" }
+}
+"FLOOR_LAB_STERILE" inherit "FLOOR_LAB1"
+{
+  viewId = { "sterile_floor" }
+  luxury = 0.5
+}
+"SPECIMEN_WOOD"
+{
+  name = "wooden specimen rack"
+  viewId = { "specimenrack_wood" }
+  blockMovement = true
+  usageType = BuiltinUsageId STUDY
+  usageTime = 5
+  canHideHere = true
+  fire = 70
+  strength = 50
+  maxTraining = {
+    SPELL 3
+  }
+  requiresLight = true
+  destroyFX = { DESTROY_FURNITURE Rgb 120 87 46 255 }
+}
+"SPECIMEN_IRON"
+{
+  name = "iron specimen rack"
+  viewId = { "specimenrack_iron" }
+  blockMovement = true
+  usageType = BuiltinUsageId STUDY
+  usageTime = 5
+  canHideHere = true
+  fire = 70
+  strength = 50
+  upgrade = "BOOKCASE_WOOD"
+  maxTraining = {
+    SPELL 7
+  }
+  requiresLight = true
+  destroyFX = { DESTROY_FURNITURE Rgb 120 120 120 255 }
+}
+"SPECIMEN_GOLD"
+{
+  name = "golden specimen rack"
+  viewId = { "specimenrack_gold" }
+  blockMovement = true
+  usageType = BuiltinUsageId STUDY
+  usageTime = 5
+  canHideHere = true
+  fire = 70
+  strength = 50
+  upgrade = "BOOKCASE_IRON"
+  maxTraining = {
+    SPELL 12
+  }
+  requiresLight = true
+  destroyFX = { DESTROY_FURNITURE Rgb 190 190 40 255 }
+}
+
+"LAB_LIGHT_N"
+  {
+    name = "laboratory light"
+    viewId = { "lablight_n" }
+    layer = CEILING
+    viewLayer = TORCH1
+    lightEmission = 4.1
+    attachmentDir = N
+    requiredSupport = { { { N } } }
+    canBuildOutsideOfTerritory = true
+  }
+  
+  "LAB_LIGHT_S" inherit "LAB_LIGHT_N"
+  {
+    name = "laboratory light"
+    viewId = { "lablight_s"}
+    attachmentDir = S
+    requiredSupport = { { { S } } }
+  }
+
+  "LAB_LIGHT_E" inherit "LAB_LIGHT_N"
+  {
+    name = "laboratory light"
+    viewId = { "lablight_e"}
+    attachmentDir = E
+    requiredSupport = { { { E } } }
+  }
+
+  "LAB_LIGHT_W" inherit "LAB_LIGHT_N"
+  {
+    name = "laboratory light"
+    viewId = { "lablight_w"}
+    attachmentDir = W
+    requiredSupport = { { { W } } }
+  }
+"LAB_WALL"
+{
+  name = "wall"
+  viewId = { "lab_wall" }
+  blockMovement = true
+  blockVision = { NORMAL ELF }
+  wall = true
+  viewLayer = FLOOR_BACKGROUND
+  xForgetAfterBuilding = true
+  luxury = 0.2
+  constructMessage = REINFORCE
+  builtOver = {"MOUNTAIN"}
+  canBuildOutsideOfTerritory = true
+  strength2 = {
+    300 BOULDER
+    200 DIG
+    2500 HOSTILE_DIG
+    4000 HOSTILE_DIG_NO_SKILL
+  }
+  destroyFX = { ROCK_CLOUD Rgb 220 210 180 255 }
+  tryDestroyFX = { ROCK_SPLINTERS Rgb 220 210 180 255 }
+}
+"LAB_WALL2" inherit "LAB_WALL"
+{
+  viewId = { "lab_wall" }
+  builtOver = {"MOUNTAIN2"}
+  destroyFX = { ROCK_CLOUD Rgb 200 200 200 255 }
+  tryDestroyFX = { ROCK_SPLINTERS Rgb 200 200 200 255 }
+}
+"LAB_DOOR"
+{
+  name = "lab door"
+  viewId = { "lab_door_ew" }
+  blockingEnemies = true
+  canHideHere = true
+  blockVision = { NORMAL ELF }
+  strength = 320
+  clickType = LOCK
+  requiredSupport = { { { E W } } { { N S } {"lab_door_ns"} } }
+  destroyFX = { DESTROY_FURNITURE Rgb 120 120 120 255 }
+}
+"LAB_GATE"
+{
+  name = "wide lab door"
+  viewId = { "lab_gate_w" }
+  blockingEnemies = true
+  canHideHere = true
+  blockVision = { NORMAL ELF }
+  strength = 480
+  clickType = LOCK
+  requiredSupport = { { { W } } { { N } {"lab_gate_n"} } { { E } {"lab_gate_e"} } { { S } {"lab_gate_s"} } }
+  destroyFX = { DESTROY_FURNITURE Rgb 120 120 120 255 }
+}

@@ -1,0 +1,5 @@
+"mutagenic" SPELL
+{
+  "offer internship" 1
+  "wereboost" 7
+}

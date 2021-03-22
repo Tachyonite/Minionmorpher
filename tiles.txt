@@ -1,0 +1,63 @@
+{ "keeperscientist1" "@" ColorId PURPLE }
+{ "keeperscientist2" "@" ColorId PURPLE }
+{ "keeperscientist3" "@" ColorId PURPLE }
+{ "keeperscientist4" "@" ColorId PURPLE }
+
+{ "mutasyringe" "*" ColorId GREEN }
+{ "mutasyringe_b" "*" ColorId RED }
+{ "mutasyringe_c" "*" ColorId BLUE }
+{ "rawmutagen" "X" ColorId GREEN }
+{ viewId = "mutagen_lab" symbol = "L" color = ColorId GREEN animated = true}
+{ viewId = "lab_wall" symbol = "#" color = ColorId LIGHT_GRAY
+  sprite = "mountain" wallShadow = true mountainSides = "labwall" }
+
+{ "construction_worker" "w" ColorId ORANGE }
+{ "testsubject" "t" ColorId WHITE }
+{ "midmorph" "m" ColorId ORANGE }
+{ "wolfmorph" "M" ColorId BLUE }
+{ "alphawolf" "W" ColorId BLUE }
+{ "ratmorph" "M" ColorId WHITE }
+{ "wererat" "W" ColorId WHITE }
+{ "boarmorph" "M" ColorId RED }
+{ "wereboar" "W" ColorId RED }
+{ "crocmorph" "M" ColorId BROWN }
+{ "werecroc" "W" ColorId BROWN }
+{ "sheepmorph" "M" ColorId YELLOW }
+{ "weresheep" "W" ColorId YELLOW }
+{ "chookmorph" "m" ColorId YELLOW }
+{ "werechook" "w" ColorId YELLOW }
+{ "chookegg" "O" ColorId YELLOW }
+{ "cowmorph" "m" ColorId WHITE }
+{ "werecow" "w" ColorId WHITE }
+
+{ viewId = "lab_floor" symbol = "." color = ColorId LIGHT_GRAY roadConnections = true}
+{ "lab_floor1" "." ColorId LIGHT_GRAY }
+{ "lab_floor2" "." ColorId LIGHT_GRAY }
+{ "lab_floor3" "." ColorId LIGHT_GRAY }
+{ "lab_floor4" "." ColorId LIGHT_GRAY }
+{ "lab_floor5" "." ColorId LIGHT_GRAY }
+{ "sterile_floor" "." ColorId WHITE }
+
+{ viewId = "lab_gate_w" symbol = "-" color = ColorId GRAY
+  wallShadow = true }
+{ viewId = "lab_gate_e" symbol = "-" color = ColorId GRAY
+  wallShadow = true }
+{ viewId = "lab_gate_n" symbol = "|" color = ColorId GRAY }
+{ viewId = "lab_gate_s" symbol = "|" color = ColorId GRAY }
+{ viewId = "lab_door_ew" symbol = "-" color = ColorId GRAY
+  wallShadow = true }
+{ viewId = "lab_door_ns" symbol = "|" color = ColorId GRAY }
+
+{ viewId = "lablight_n" symbol = "o" color = ColorId YELLOW}
+{ viewId = "lablight_s" symbol = "o" color = ColorId YELLOW}
+{ viewId = "lablight_e" symbol = "o" color = ColorId YELLOW}
+{ viewId = "lablight_w" symbol = "o" color = ColorId YELLOW}
+
+{ viewId = "goo_tube" symbol = "n" color = ColorId GREEN animated = true}
+
+{ viewId = "specimenrack_wood" symbol = "▤" color = ColorId BROWN
+  roundShadow = true isSymbolFont = true }
+{ viewId = "specimenrack_iron" symbol = "▤" color = ColorId LIGHT_GRAY
+  roundShadow = true isSymbolFont = true }
+{ viewId = "specimenrack_gold" symbol = "▤" color = ColorId YELLOW
+  roundShadow = true isSymbolFont = true }

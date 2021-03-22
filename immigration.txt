@@ -1,0 +1,30 @@
+"test_subjects"
+{
+    {
+      ids = { "CONSTRUCTION_WORKER" }
+      traits = { WORKER NO_LIMIT NO_EQUIPMENT NO_LEISURE_ZONE }
+      spawnLocation = NearLeader
+      keybinding = CREATE_IMP
+      sound = CREATE_IMP 2
+      noAuto = true
+      initialRecruitment = 4
+      requirements = {
+        { 1 ExponentialCost "GOLD" 30 5 4 }
+      }
+    }
+    {
+      ids = { "TEST_SUBJECT" }
+      noAuto = true
+      traits = { FIGHTER }
+      frequency = 0.7
+    }
+    {
+      ids = { "CHOOK_EGG" }
+      traits = { FIGHTER }
+      spawnLocation = Pregnancy
+      requirements = {
+        { 0.0 Pregnancy }
+      }
+      frequency = 0.3
+    }
+}

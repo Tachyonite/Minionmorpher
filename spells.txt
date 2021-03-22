@@ -1,0 +1,108 @@
+"offer internship"
+{
+  symbol = "👑"
+  effect = Name "offer internship" Description "Converts a prisoner into a test subject by offering them a more advantageous position (and form)! Requires a free population slot." {
+    Filter BodyMaterial FLESH Filter CreatureStatus PRISONER Filter Humanoid Filter Not PopLimitReached {
+		Polymorph "TEST_SUBJECT" none
+		RemoveMinionTrait PRISONER
+		RemoveMinionTrait WORKER
+		RemoveMinionTrait NO_LIMIT
+		RemoveLasting TIED_UP
+		SetMinionActivity IDLE
+    }
+	}
+  range = 5
+  endOnly = true
+  targetSelf = false
+  cooldown = 1000
+  message = "offer a fulfilling role to a prisoner!" "offers a fulfilling role to a prisoner!"
+  type = ABILITY
+}
+"sheepify"
+{
+  symbol = "O"
+  effect = Name "ovinification" Description "Bite a target, changing them into another weresheep!"
+      Filter BodyMaterial FLESH Filter Not CreatureId "KEEPER_SCIENTIST" Filter Humanoid {
+    Polymorph "WERESHEEP" none
+  }
+  range = 1
+  endOnly = true
+  targetSelf = false
+  cooldown = 1000
+  message = "bite, causing rapid mutation!" "bites, causing rapid mutation!"
+  type = ABILITY
+}
+"wereboost"
+{
+  symbol = "B"
+  effect = Name "wereboost" Description "Inject yourself with a specialty serum, temporarily transforming into a raging, powerful werecreature!"
+      Filter CreatureId "KEEPER_SCIENTIST"{
+			Lasting RAGE
+		ChooseRandom {
+			Polymorph "WEREBOAR" 100
+			Polymorph "WERERAT" 100
+			Polymorph "WERECROC" 100
+			Polymorph "ALPHA_WOLF" 100
+			Polymorph "WERESHEEP" 100
+			Polymorph "WERECOW" 100
+			Polymorph "WERECHOOK" 100
+		
+		}
+		IncreaseAttr DAMAGE 20
+	  }
+  targetSelf = true
+  cooldown = 500
+  message = "rapidly mutate into a werecreature!" "rapidly mutates into a werecreature!"
+  type = ABILITY
+}
+"hatch egg"
+{
+  symbol = "🐣"
+  effect = Name "hatch egg" Description "A chookmorph can hatch an egg, resulting in a random morph or animal. Requires a free population slot."
+      Filter CreatureId "CHOOK_EGG" Filter Not PopLimitReached{
+	  ChooseRandom{
+		Polymorph "WOLFMORPH" none
+		Polymorph "CHOOKMORPH" none
+		Polymorph "COWMORPH" none
+		Polymorph "BOARMORPH" none
+		Polymorph "CROCMORPH" none
+	  }
+    
+  }
+  range = 1
+  endOnly = true
+  targetSelf = false
+  cooldown = 2000
+  message = "hatch an egg." "hatches an egg."
+  type = ABILITY
+}
+"ram"
+{
+  symbol = "💨"
+  endOnly = true
+  effect = Name "ram" Description "Charge and ram a target, dealing a good amount of damage and pushing them back!"{
+    Teleport
+    Damage DAMAGE SHOOT
+    Damage DAMAGE SHOOT
+	Shove
+	Shove
+  }
+  cooldown = 30
+  sound = SPELL_BLAST
+  type = ABILITY
+}
+"massive ram"
+{
+  symbol = "💨"
+  endOnly = true
+  effect = Name "massive ram" Description "You sure are, aren't you? Deals appropriately massive damage on a target when ramming, and pushes multiple units back on impact."{
+    Teleport
+    Damage DAMAGE SHOOT
+    Damage DAMAGE SHOOT
+    Damage DAMAGE SHOOT
+	CircularBlast
+  }
+  cooldown = 50
+  sound = SPELL_BLAST
+  type = ABILITY
+}
