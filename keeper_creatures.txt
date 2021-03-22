@@ -10,12 +10,9 @@
   zLevelGroups = { "basic" "evil" }
   initialTech = { "basic mutagens" }
   buildingGroups = {
-      "structure" "doors" "floors" "storage" "zones" "throne" "beds" "beast_cage"
-      "training" "crafting" "mutagen lab" "prison" "orders"
+      "structure" "doors" "floors" "lab structural" "storage" "zones" "throne" "beds" "beast_cage"
+      "training" "lab functional" "crafting" "prison" "orders"
       "installations" "minion_statues" "traps"
   }
   workshopGroups = { "basic" "traps" "serums"}
   description = "Create serums, mutate test subjects and become more than human in a quest to change the world!"
-# Special traits example, all traits are added
-#   specialTraits = { LastingEffect SPEED ExtraTraining MELEE 5 }
-}

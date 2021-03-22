@@ -1,14 +1,11 @@
 
-  "mutagen lab"
+  "lab structural"
   {
-    { Furniture {{ "MUTAGEN_LAB" }   "IRON" 30 }                    "Mutagen lab"       "Lab"
-        "Allows making mutagens." 0 { TechId "basic mutagens" }}
-    { Furniture {{ "SPECIMEN_WOOD" }   "WOOD" 25 }                    "Wooden specimen rack"       "Lab"
-        "Unlocks specialty abilities." 0 { TechId "basic mutagens" }}
-    { Furniture {{ "SPECIMEN_IRON" }   "IRON" 25 }                    "Iron specimen rack"       "Lab"
-        "Unlocks specialty abilities." 0 { TechId "advanced mutagens" }}
-    { Furniture {{ "SPECIMEN_GOLD" }   "GOLD" 25 }                    "Gold specimen rack"       "Lab"
-        "Unlocks specialty abilities." 0 { TechId "master mutagens" }}
+	{ Furniture {{ "GOO_TUBE" }   "IRON" 1 }                    "Science vat"       "Lab design"
+        "A vat full of liquid, green science juice." 0 }
+	 { Furniture {{ "LAB_LIGHT_N" "LAB_LIGHT_S" "LAB_LIGHT_W" "LAB_LIGHT_E"}     }                    "Laboratory lamp"         "Lab design" "Put next to a wall like a torch." }
+	{ Furniture {{ "LAB_WALL" "LAB_WALL2" } "IRON" 3}       "Plated wall"    "Lab design"
+      "Reinforced walls are better at stopping enemies from digging into your laboratory."}
     { Furniture {{ "FLOOR_LAB1" }   "IRON" 2 }                    "Lab floor (panel)"       "Lab design"
         "A floor suitable for a laboratory." 0 }
     { Furniture {{ "FLOOR_LAB2" }   "IRON" 2 }                    "Lab floor (grate)"       "Lab design"
@@ -23,14 +20,22 @@
         "A floor suitable for a very clean laboratory." 0 }
     { Furniture {{ "FLOOR_LAB_CONNECTED" }   "IRON" 2 }                    "Lab floor (connecting)"       "Lab design"
         "A floor suitable for a laboratory." 0 }
-    { Furniture {{ "GOO_TUBE" }   "IRON" 1 }                    "Science vat"       "Lab design"
-        "A vat full of liquid, green science juice." 0 }
-	 { Furniture {{ "LAB_LIGHT_N" "LAB_LIGHT_S" "LAB_LIGHT_W" "LAB_LIGHT_E"}     }                    "Laboratory lamp"         "Lab design" "Put next to a wall like a torch." }
-	{ Furniture {{ "LAB_WALL" "LAB_WALL2" } "IRON" 3}       "Plated wall"    "Lab design"
-      "Reinforced walls are better at stopping enemies from digging into your laboratory."}
+    
 	  
-	{ Furniture {{ "LAB_DOOR" }                   "IRON" 8 }        "Lab door"   "Security"
+	{ Furniture {{ "LAB_DOOR" }                   "IRON" 8 }        "Lab door"   "Doors"
       "Stops enemies. Your minions can pass freely unless you lock it."}
-    { Furniture {{ "LAB_GATE" }                   "IRON" 10 }        "Wide lab door"   "Security"
+    { Furniture {{ "LAB_GATE" }                   "IRON" 10 }        "Wide lab door"   "Doors"
       "Stops enemies. Your minions can pass freely unless you lock it."}
+  }
+  
+  "lab functional"
+  {
+    { Furniture {{ "MUTAGEN_LAB" }   "IRON" 30 }                    "Mutagen lab"       "Lab"
+        "Allows making mutagens." 0 { TechId "basic mutagens" }}
+    { Furniture {{ "SPECIMEN_WOOD" }   "WOOD" 25 }                    "Wooden specimen rack"       "Lab"
+        "Unlocks specialty abilities." 0 { TechId "basic mutagens" }}
+    { Furniture {{ "SPECIMEN_IRON" }   "IRON" 25 }                    "Iron specimen rack"       "Lab"
+        "Unlocks specialty abilities." 0 { TechId "advanced mutagens" }}
+    { Furniture {{ "SPECIMEN_GOLD" }   "GOLD" 25 }                    "Gold specimen rack"       "Lab"
+        "Unlocks specialty abilities." 0 { TechId "master mutagens" }}
   }
