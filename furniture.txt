@@ -195,3 +195,27 @@
   requiredSupport = { { { W } } { { N } {"lab_gate_n"} } { { E } {"lab_gate_e"} } { { S } {"lab_gate_s"} } }
   destroyFX = { DESTROY_FURNITURE Rgb 120 120 120 255 }
 }
+"FABRICATOR"
+{
+  name = "fabricator"
+  viewId = { "fabricator" }
+  blockMovement = true
+  usageTime = 5
+  canHideHere = true
+  fire = 0
+  strength = 300
+  requiresLight = true
+  usageFX = WORKSHOP
+}
+"SYNTHLATHE"
+{
+  name = "synthlathe"
+  viewId = { "synthlathe" }
+  blockMovement = true
+  usageTime = 5
+  canHideHere = true
+  fire = 0
+  strength = 300
+  requiresLight = true
+  usageFX = FORGE
+}

@@ -28,6 +28,15 @@
       "Stops enemies. Your minions can pass freely unless you lock it."}
   }
   
+  "lab replacements" {
+  
+  { Furniture {{ "FABRICATOR" }   "IRON" 10 }                    "Fabricator"       "Fabrication"
+        "Crafts basic items from various materials." 0}
+  { Furniture {{ "SYNTHLATHE" }   "IRON" 10 }                    "Synthlathe"       "Fabrication"
+        "Crafts advanced items from various materials." 0}
+  
+  }
+  
   "lab functional"
   {
     { Furniture {{ "MUTAGEN_LAB" }   "IRON" 30 }                    "Mutagen lab"       "Lab"

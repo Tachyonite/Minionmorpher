@@ -8,6 +8,8 @@
 { "mutasyringe_c" "*" ColorId BLUE }
 { "rawmutagen" "X" ColorId GREEN }
 { viewId = "mutagen_lab" symbol = "L" color = ColorId GREEN animated = true}
+{ viewId = "fabricator" symbol = "F" color = ColorId LIGHT_BLUE animated = true}
+{ viewId = "synthlathe" symbol = "S" color = ColorId LIGHT_BLUE animated = true}
 { viewId = "lab_wall" symbol = "#" color = ColorId LIGHT_GRAY
   sprite = "mountain" wallShadow = true mountainSides = "labwall" }
 

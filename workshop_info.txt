@@ -1,1 +1,3 @@
 "MUTAGEN_LAB" { "MUTAGEN_LAB" "mutagen lab" }
+"FABRICATOR" { "FABRICATOR" "fabricator" }
+"SYNTHLATHE" { "SYNTHLATHE" "synthlathe" }
