@@ -18,6 +18,7 @@
 { "midmorph" "m" ColorId ORANGE }
 { "wolfmorph" "M" ColorId BLUE }
 { "alphawolf" "W" ColorId BLUE }
+{ "keeper_alphawolf" "@" ColorId BLUE }
 { "ratmorph" "M" ColorId WHITE }
 { "wererat" "W" ColorId WHITE }
 { "boarmorph" "M" ColorId RED }

@@ -32,6 +32,18 @@
   message = "bite, causing rapid mutation!" "bites, causing rapid mutation!"
   type = ABILITY
 }
+"lupine evolution"
+{
+  symbol = "X"
+  effect = Name "wereboost" Description "Activate the latent serum in your system to reshape yourself into a huge & powerful alpha wolf!"
+      Filter CreatureId "KEEPER_SCIENTIST"{
+		Polymorph "KEEPER_ALPHA_WOLF" none		
+	  }
+  targetSelf = true
+  cooldown = 500
+  message = "rapidly mutate into a werecreature!" "rapidly mutates into a werecreature!"
+  type = ABILITY
+}
 "wereboost"
 {
   symbol = "B"
@@ -49,6 +61,31 @@
 		
 		}
 		IncreaseAttr DAMAGE 20
+		IncreaseAttr DEFENSE 10
+	  }
+  targetSelf = true
+  cooldown = 500
+  message = "rapidly mutate into a werecreature!" "rapidly mutates into a werecreature!"
+  type = ABILITY
+}
+"extended wereboost"
+{
+  symbol = "B"
+  effect = Name "wereboost" Description "Inject yourself with a specialty serum, temporarily transforming into a raging, powerful werecreature!"
+      Filter CreatureId "KEEPER_SCIENTIST"{
+			Lasting RAGE
+		ChooseRandom {
+			Polymorph "WEREBOAR" 1000
+			Polymorph "WERERAT" 1000
+			Polymorph "WERECROC" 1000
+			Polymorph "ALPHA_WOLF" 1000
+			Polymorph "WERESHEEP" 1000
+			Polymorph "WERECOW" 1000
+			Polymorph "WERECHOOK" 1000
+		
+		}
+		IncreaseAttr DAMAGE 30
+		IncreaseAttr DEFENSE 20
 	  }
   targetSelf = true
   cooldown = 500

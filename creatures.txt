@@ -162,6 +162,25 @@
       pluralName = "alpha wolves"
     }
   }
+"KEEPER_ALPHA_WOLF" inherit "KEEPER_SCIENTIST"
+  {
+    viewId = { "keeper_alphawolf" }
+    attr = {
+      DAMAGE 50
+      DEFENSE 55 
+    }
+    body = {
+      type = Humanoid LARGE
+      intrinsicAttacks = {
+        LEG  {{ itemType = { Intrinsic { "claws_attack" } "claws" 15 { attackType = HIT attackMsg = CLAW }} isExtraAttack = true }}
+        HEAD {{ itemType = { Intrinsic { "bite_attack" }  "fangs" 20 { attackType = BITE attackMsg = BITE }} isExtraAttack = true }}
+      }
+    }
+    maxLevelIncrease = {
+      MELEE 20
+      SPELL 10
+    }
+  }
 "BOARMORPH"
   {
     viewId = { "boarmorph" }
