@@ -32,18 +32,6 @@
   message = "bite, causing rapid mutation!" "bites, causing rapid mutation!"
   type = ABILITY
 }
-"lupine evolution"
-{
-  symbol = "X"
-  effect = Name "wereboost" Description "Activate the latent serum in your system to reshape yourself into a huge & powerful alpha wolf!"
-      Filter CreatureId "KEEPER_SCIENTIST"{
-		Polymorph "KEEPER_ALPHA_WOLF" none		
-	  }
-  targetSelf = true
-  cooldown = 500
-  message = "rapidly mutate into a werecreature!" "rapidly mutates into a werecreature!"
-  type = ABILITY
-}
 "wereboost"
 {
   symbol = "B"
@@ -143,3 +131,5 @@
   sound = SPELL_BLAST
   type = ABILITY
 }
+
+OneTimeAbility("lupine evolution", "Become a fearsome prime wolfmorph with wickedly dangerous melee ability!", Polymorph "KEEPER_ALPHA_WOLF" none, "✴")

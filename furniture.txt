@@ -219,3 +219,18 @@
   requiresLight = true
   usageFX = FORGE
 }
+"PUNCHING_BAG"
+{
+  name = "punching bag"
+  viewId = { "punching_bag" }
+  blockMovement = true
+  usageType = BuiltinUsageId TRAIN
+  fire = 50
+  canHideHere = true
+  strength = 80
+  maxTraining = {
+    MELEE 5
+  }
+  requiresLight = true
+  destroyFX = { DESTROY_FURNITURE Rgb 120 87 46 255 }
+}

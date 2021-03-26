@@ -10,9 +10,9 @@
   zLevelGroups = { "basic" "evil" }
   initialTech = { "basic mutagens" }
   buildingGroups = {
-      "structure" "doors" "floors" "lab structural" "lab replacements" "storage" "zones" "throne" "beds" "beast_cage"
+      "lab structure" "lab doors" "lab floors" "lab replacements" "storage" "zones" "beds" "beast_cage"
       "training" "lab functional" "prison" "orders"
-      "installations" "minion_statues" "traps"
+      "lab installations" "installations" "minion_statues" "traps"
   }
   workshopGroups = { "basic" "traps" "serums"}
   description = "Create serums, mutate test subjects and become more than human in a quest to change the world!"

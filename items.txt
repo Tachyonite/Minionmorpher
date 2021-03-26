@@ -164,6 +164,27 @@ End
 			}
 	}
   }
+"EvolutionSerum"
+  {
+    viewId = { "mutasyringe_d" }
+    name = "evolution activator"
+    weight = 0.5
+    description = "An injection of potent mutagen that allows you to choose an evolutionary path for your keeper via the ability screen. Only one may be chosen."
+    applyTime = 3
+    uses = 1
+    usedUpMsg = false
+    displayUses = false
+
+    price = 50
+    effect = {
+		OneTimeBoost()
+		Name "Evolution serum" Description "Transform a test subject directly into a morph. Adverse outcomes no longer pose a threat." 
+		
+		Filter CreatureId "KEEPER_SCIENTIST" AI Not Enemy -1 1 {
+			GrantAbility "lupine evolution"
+			}
+	}
+  }
 "AnimalSyringe"
   {
     viewId = { "mutasyringe" }
