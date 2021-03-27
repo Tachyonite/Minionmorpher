@@ -88,12 +88,12 @@
   
   "lab functional"
   {
-    { Furniture {{ "MUTAGEN_LAB" }   "IRON" 30 }                    "Mutagen lab"       "Lab"
+    { Furniture {{ "MUTAGEN_LAB" }   "IRON" 30 }                    "Mutagen lab"       "Laboratory"
         "Allows making mutagens." 0 { TechId "basic mutagens" }}
-    { Furniture {{ "SPECIMEN_WOOD" }   "WOOD" 25 }                    "Wooden specimen rack"       "Lab"
+    { Furniture {{ "SPECIMEN_WOOD" }   "WOOD" 25 }                    "Wooden specimen rack"       "Laboratory"
         "Unlocks specialty abilities." 0 { TechId "basic mutagens" }}
-    { Furniture {{ "SPECIMEN_IRON" }   "IRON" 25 }                    "Iron specimen rack"       "Lab"
+    { Furniture {{ "SPECIMEN_IRON" }   "IRON" 25 }                    "Iron specimen rack"       "Laboratory"
         "Unlocks specialty abilities." 0 { TechId "advanced mutagens" }}
-    { Furniture {{ "SPECIMEN_GOLD" }   "GOLD" 25 }                    "Gold specimen rack"       "Lab"
+    { Furniture {{ "SPECIMEN_GOLD" }   "GOLD" 25 }                    "Gold specimen rack"       "Laboratory"
         "Unlocks specialty abilities." 0 { TechId "master mutagens" }}
   }

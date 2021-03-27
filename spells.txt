@@ -112,6 +112,7 @@
 	Shove
 	Shove
   }
+  range = 4
   cooldown = 30
   sound = SPELL_BLAST
   type = ABILITY
@@ -127,9 +128,10 @@
     Damage DAMAGE SHOOT
 	CircularBlast
   }
+  range = 6
   cooldown = 50
   sound = SPELL_BLAST
   type = ABILITY
 }
 
-OneTimeAbility("lupine evolution", "Become a fearsome prime wolfmorph with wickedly dangerous melee ability!", Polymorph "KEEPER_ALPHA_WOLF" none, "✴")
+OneTimeAbility("lupine evolution", "Become a fearsome prime wolfmorph with wickedly dangerous melee ability!", AI And {} 1 -1 Polymorph "KEEPER_ALPHA_WOLF" none, "✴")

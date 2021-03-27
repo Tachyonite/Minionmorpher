@@ -26,7 +26,8 @@
     # skill.h
     skills = {
       "LABORATORY" 0.5
-      "WORKSHOP" 1
+      "FABRICATOR" 1
+      "SYNTHLATHE" 1
       "MUTAGEN_LAB" 0.5
     }
     # experience_type.h
@@ -169,6 +170,9 @@
       DAMAGE 50
       DEFENSE 55 
     }
+	permanentEffects = {
+      NIGHT_VISION 1
+    }
     body = {
       type = Humanoid LARGE
       intrinsicAttacks = {
@@ -202,7 +206,6 @@
       pluralName = "boarmorphs"
     }
 	skills = {
-      "LABORATORY" 0.7
       "MUTAGEN_LAB" 0.7
     }
   }
@@ -227,7 +230,6 @@
       pluralName = "wereboars"
     }
 	skills = {
-      "LABORATORY" 0.7
       "MUTAGEN_LAB" 0.7
     }
   }
@@ -260,7 +262,8 @@
       pluralName = "ratmorphs"
     }
 	skills = {
-      "WORKSHOP" 0.7
+      "FABRICATOR" 0.7
+      "SYNTHLATHE" 0.7
 	  "JEWELER" 0.2
     }
   }
@@ -293,7 +296,8 @@
       pluralName = "wererats"
     }
 	skills = {
-      "WORKSHOP" 0.7
+      "FABRICATOR" 0.7
+      "SYNTHLATHE" 0.7
 	  "JEWELER" 0.2
     }
   }
@@ -318,7 +322,7 @@
 	  SWIMMING_SKILL 1
     }
     skills = {
-      "WORKSHOP" 0.3
+      "FABRICATOR" 0.3
     }
     maxLevelIncrease = {
       MELEE 12
@@ -348,7 +352,7 @@
 	  SWIMMING_SKILL 1
     }
     skills = {
-      "WORKSHOP" 0.5
+      "FABRICATOR" 0.5
     }
     maxLevelIncrease = {
       MELEE 15
