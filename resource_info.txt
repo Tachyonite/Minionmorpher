@@ -1,1 +1,2 @@
 "RAW_MUTAGEN"           { RESOURCE    "raw mutagen"           { "rawmutagen" } }
+"ALLOY"           { RESOURCE    "alloy"           { "alloy" } }

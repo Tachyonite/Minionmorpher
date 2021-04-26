@@ -4,7 +4,7 @@
   tribeAlignment = EVIL
   immigrantGroups = {"test_subjects"}
   technology = {
-      "basic mutagens" "advanced mutagens" "master mutagens" "alchemy" "advanced alchemy" "alchemical conversion"
+      "basic mutagens" "advanced mutagens" "master mutagens" "precision engineering" "advanced alloys" "alchemy" "advanced alchemy" "alchemical conversion"
       "iron working" "jewellery" "two-handed weapons" "traps" "archery"
   }
   zLevelGroups = { "basic" "evil" }
@@ -12,7 +12,7 @@
   buildingGroups = {
       "lab structure" "lab doors" "lab floors" "storage" "zones" "beds" "beast_cage"
       "training" "lab replacements" "lab functional" "lab installations" "prison" "orders"
-      "installations" "minion_statues" "traps"
+      "installations" "traps"
   }
   workshopGroups = { "basic" "traps" "serums"}
   description = "Create serums, mutate test subjects and become more than human in a quest to change the world!"

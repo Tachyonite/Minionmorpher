@@ -24,6 +24,16 @@
         }
   }
   
+"ALLOY"
+  {
+    viewId = { "alloy" }
+    name = "alloy"
+    itemClass = OTHER
+    price = 5
+    resourceId = "ALLOY"
+    weight = 0.5
+  }
+  
 Def OneTimeBoost()
   NoAutoAssign EquipmentType COMBAT_ITEM AI And {} -1 1 AI And {} 0 1
 End

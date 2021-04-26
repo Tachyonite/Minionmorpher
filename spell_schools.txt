@@ -1,5 +1,9 @@
 "mutagenic" SPELL
 {
   "offer internship" 1
+  "morphboost" 5
   "wereboost" 7
+  "draconic evolution" 10
+  "lupine evolution" 10
+  "porcine evolution" 10
 }

@@ -1,3 +1,5 @@
 "basic mutagens"                  { "Build a mutagen lab and begin producing mutagens." }
 "advanced mutagens"               { "Make more interesting serums that have targeted effects." 					{"basic mutagens"}}
 "master mutagens"                 { "Produce powerful serums that unlock access to the strongest morphs." 		{"advanced mutagens"}}
+"precision engineering"			  { "Produce items using metal via the synthlathe." }
+"advanced alloys"			      { "Create durable alloys for more advanced weaponry, superior to the ridiculous fictional elements of this world." {"precision engineering"}}

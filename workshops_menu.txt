@@ -51,5 +51,10 @@
       {{"AdaWarHammer"}          20       "ADA" 40       "two-handed weapons"}
       {{"AdaBattleAxe"}          22       "ADA" 50       "two-handed weapons"}
   }
+  
+  "ALLOY_REACTOR"
+  {
+      {item = {"ALLOY"}   work = 2 cost = "ADA" 5 }
+  }
 
 }

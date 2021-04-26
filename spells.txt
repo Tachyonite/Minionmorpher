@@ -32,51 +32,51 @@
   message = "bite, causing rapid mutation!" "bites, causing rapid mutation!"
   type = ABILITY
 }
+"morphboost"
+{
+  symbol = "B"
+  effect = Name "morphboost" Description "Inject yourself with a specialty serum, temporarily transforming into a powerful morph!"
+      Filter CreatureId "KEEPER_SCIENTIST" AI And {} 1 -1 {
+			Lasting RAGE
+		ChooseRandom {
+			Polymorph "BOARMORPH" 100
+			Polymorph "RATMORPH" 100
+			Polymorph "CROCMORPH" 100
+			Polymorph "WOLFMORPH" 100
+			Polymorph "SHEEPMORPH" 100
+			Polymorph "COWMORPH" 100
+			Polymorph "CHOOKMORPH" 100
+		
+		}
+		IncreaseAttr DAMAGE 10
+		IncreaseAttr DEFENSE 5
+	  }
+  targetSelf = true
+  cooldown = 600
+  message = "rapidly mutate into a morph!" "rapidly mutates into a morph!"
+  type = ABILITY
+}
 "wereboost"
 {
   symbol = "B"
   effect = Name "wereboost" Description "Inject yourself with a specialty serum, temporarily transforming into a raging, powerful werecreature!"
-      Filter CreatureId "KEEPER_SCIENTIST"{
+      Filter CreatureId "KEEPER_SCIENTIST" AI And {} 1 -1{
 			Lasting RAGE
 		ChooseRandom {
-			Polymorph "WEREBOAR" 100
-			Polymorph "WERERAT" 100
-			Polymorph "WERECROC" 100
-			Polymorph "ALPHA_WOLF" 100
-			Polymorph "WERESHEEP" 100
-			Polymorph "WERECOW" 100
-			Polymorph "WERECHOOK" 100
+			Polymorph "WEREBOAR" 500
+			Polymorph "WERERAT" 500
+			Polymorph "WERECROC" 500
+			Polymorph "ALPHA_WOLF" 500
+			Polymorph "WERESHEEP" 500
+			Polymorph "WERECOW" 500
+			Polymorph "WERECHOOK" 500
 		
 		}
 		IncreaseAttr DAMAGE 20
 		IncreaseAttr DEFENSE 10
 	  }
   targetSelf = true
-  cooldown = 500
-  message = "rapidly mutate into a werecreature!" "rapidly mutates into a werecreature!"
-  type = ABILITY
-}
-"extended wereboost"
-{
-  symbol = "B"
-  effect = Name "wereboost" Description "Inject yourself with a specialty serum, temporarily transforming into a raging, powerful werecreature!"
-      Filter CreatureId "KEEPER_SCIENTIST"{
-			Lasting RAGE
-		ChooseRandom {
-			Polymorph "WEREBOAR" 1000
-			Polymorph "WERERAT" 1000
-			Polymorph "WERECROC" 1000
-			Polymorph "ALPHA_WOLF" 1000
-			Polymorph "WERESHEEP" 1000
-			Polymorph "WERECOW" 1000
-			Polymorph "WERECHOOK" 1000
-		
-		}
-		IncreaseAttr DAMAGE 30
-		IncreaseAttr DEFENSE 20
-	  }
-  targetSelf = true
-  cooldown = 500
+  cooldown = 1000
   message = "rapidly mutate into a werecreature!" "rapidly mutates into a werecreature!"
   type = ABILITY
 }
@@ -105,14 +105,11 @@
 {
   symbol = "💨"
   endOnly = true
-  effect = Name "ram" Description "Charge and ram a target, dealing a good amount of damage and pushing them back!"{
-    Teleport
+  effect = Name "ram" Description "Ram a target, dealing a good amount of damage and pushing them back!"{
     Damage DAMAGE SHOOT
-    Damage DAMAGE SHOOT
-	Shove
 	Shove
   }
-  range = 4
+  range = 1
   cooldown = 30
   sound = SPELL_BLAST
   type = ABILITY
@@ -122,16 +119,17 @@
   symbol = "💨"
   endOnly = true
   effect = Name "massive ram" Description "You sure are, aren't you? Deals appropriately massive damage on a target when ramming, and pushes multiple units back on impact."{
-    Teleport
     Damage DAMAGE SHOOT
     Damage DAMAGE SHOOT
     Damage DAMAGE SHOOT
 	CircularBlast
   }
-  range = 6
+  range = 1
   cooldown = 50
   sound = SPELL_BLAST
   type = ABILITY
 }
 
-OneTimeAbility("lupine evolution", "Become a fearsome prime wolfmorph with wickedly dangerous melee ability!", AI And {} 1 -1 Polymorph "KEEPER_ALPHA_WOLF" none, "✴")
+OneTimeAbility("lupine evolution", "Become a fearsome prime wolfmorph with wickedly dangerous melee prowess!", AI And {} 1 -1 Polymorph "KEEPER_ALPHA_WOLF" none RemoveAbility "draconic evolution" RemoveAbility "porcine evolution", "✴")
+OneTimeAbility("draconic evolution", "Become a giant dragonmorph with a powerful breath attack!", AI And {} 1 -1 Polymorph "KEEPER_DRAGON" none RemoveAbility "lupine evolution" RemoveAbility "porcine evolution", "✴")
+OneTimeAbility("porcine evolution", "Become a grouchy wereboar with an assortment of mutagenic attacks!", AI And {} 1 -1 Polymorph "KEEPER_BOAR" none RemoveAbility "draconic evolution" RemoveAbility "lupine evolution", "✴")

@@ -1,3 +1,5 @@
 "MUTAGEN_LAB" { "MUTAGEN_LAB" "mutagen lab" }
 "FABRICATOR" { "FABRICATOR" "fabricator" }
 "SYNTHLATHE" { "SYNTHLATHE" "synthlathe" }
+"ALLOY_REACTOR" { "ALLOY_REACTOR" "alloy reactor" }
+"CHAMBER_EMPTY" { "CHAMBER_EMPTY" "chamber" }

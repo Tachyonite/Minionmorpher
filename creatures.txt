@@ -26,9 +26,9 @@
     # skill.h
     skills = {
       "LABORATORY" 0.5
-      "FABRICATOR" 1
-      "SYNTHLATHE" 1
-      "MUTAGEN_LAB" 0.5
+      "FABRICATOR" 0.5
+      "SYNTHLATHE" 0.5
+      "MUTAGEN_LAB" 0.7
     }
     # experience_type.h
 	spellSchools = { "mutagenic" }
@@ -37,11 +37,6 @@
       SPELL 12
     }
     aiType = RANGED
-    inventory = {
-      # Here comes a list of items. The format of each element is defined in creature_inventory.h
-      { "Robe"}
-      # Take a look a CYCLOPS for a more detailed example.
-    }
   }
 "CONSTRUCTION_WORKER"
   {
@@ -89,6 +84,9 @@
       MELEE 7
     }
     hatedByEffect = HATE_HUMANS
+	skills = {
+      "CHAMBER_EMPTY" 0.5
+	}
   }
   
 "MIDMORPH"
@@ -185,6 +183,36 @@
       SPELL 10
     }
   }
+"KEEPER_DRAGON" inherit "KEEPER_SCIENTIST"
+  {
+    viewId = { "keeper_dragon" }
+    attr = {
+      DAMAGE 20
+      DEFENSE 40 
+	  SPELL_DAMAGE 30
+    }
+	body = {
+      type = FourLegged HUGE
+      addBodyPart = {
+        WING 2
+      }
+      intrinsicAttacks = {
+        HEAD {{{ Intrinsic { "bite_attack" } "fangs" 25 {
+            attackType = BITE
+            attackMsg = BITE
+            victimEffect = {0.7 Fire} } }}}
+      }
+    }
+    permanentEffects = {
+      FIRE_RESISTANT 1
+      RANGED_VULNERABILITY 1
+    }
+    maxLevelIncrease = {
+      MELEE 10
+      SPELL 20
+    }
+	spells = { "fire breath" "fire trap"}
+  }
 "BOARMORPH"
   {
     viewId = { "boarmorph" }
@@ -208,10 +236,11 @@
 	skills = {
       "MUTAGEN_LAB" 0.7
     }
+	
   }
 "WEREBOAR"
   {
-    viewId = { "boarmorph" }
+    viewId = { "wereboar" }
     attr = {
       DAMAGE 28
       DEFENSE 40 
@@ -231,6 +260,25 @@
     }
 	skills = {
       "MUTAGEN_LAB" 0.7
+    }
+  }
+"KEEPER_BOAR" inherit "KEEPER_SCIENTIST"
+  {
+    viewId = { "keeper_boar" }
+    attr = {
+      DAMAGE 40
+      DEFENSE 65
+	  SPELL_DAMAGE 20
+    }
+    body = {
+      type = Humanoid LARGE
+      intrinsicAttacks = {
+        HEAD {{ itemType = { Intrinsic { "bite_attack" }  "tusks" 20 { attackType = BITE attackMsg = BITE }} isExtraAttack = true }}
+     }
+	}
+    maxLevelIncrease = {
+      MELEE 15
+      SPELL 15
     }
   }
 "RATMORPH"
@@ -262,8 +310,8 @@
       pluralName = "ratmorphs"
     }
 	skills = {
-      "FABRICATOR" 0.7
-      "SYNTHLATHE" 0.7
+      "FABRICATOR" 0.5
+      "SYNTHLATHE" 0.5
 	  "JEWELER" 0.2
     }
   }
@@ -296,8 +344,8 @@
       pluralName = "wererats"
     }
 	skills = {
-      "FABRICATOR" 0.7
-      "SYNTHLATHE" 0.7
+      "FABRICATOR" 0.5
+      "SYNTHLATHE" 0.5
 	  "JEWELER" 0.2
     }
   }
@@ -432,6 +480,9 @@
     name = {
       name = "sheepmorph"
     }
+	skills = {
+      "MUTAGEN_LAB" 0.5
+    }
 	spells = { "ram" }
   }
 "WERESHEEP"
@@ -498,7 +549,7 @@
       name = "cowmorph"
     }
 	skills = {
-      "FORGE" 0.7
+      "SYNTHLATHE" 0.7
     }
   }
 "WERECOW"
@@ -522,6 +573,6 @@
       name = "werecow"
     }
 	skills = {
-      "FORGE" 0.7
+      "SYNTHLATHE" 0.7
     }
   }

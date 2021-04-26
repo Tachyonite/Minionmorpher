@@ -41,7 +41,7 @@
 	{ Furniture {{ "GOO_TUBE" }   "IRON" 1 }                    "Science vat"       "Lab design"
         "A vat full of liquid, green science juice." 0 }
 	 { Furniture {{ "LAB_LIGHT_N" "LAB_LIGHT_S" "LAB_LIGHT_W" "LAB_LIGHT_E"}     }                    "Lab light"         "Lab design" "Put next to a wall like a torch." }
-	 
+	 { Furniture {{ "COMPUTER_CORE"}   "ALLOY" 30 }                    "Computer core"         "Lab design" "A powerful supercomputer." }	 
   }
   
   "lab floors" {
@@ -79,10 +79,12 @@
   
   "lab replacements" {
   
-  { Furniture {{ "FABRICATOR" }   "IRON" 10 }                    "Fabricator"       "Fabrication"
-        "Crafts basic items from various materials." 0}
+  { Furniture {{ "FABRICATOR" }   "STONE" 10 }                    "Fabricator"       "Fabrication"
+        "Crafts basic items from various materials." 0 }
   { Furniture {{ "SYNTHLATHE" }   "IRON" 10 }                    "Synthlathe"       "Fabrication"
-        "Crafts advanced items from various materials." 0}
+        "Crafts advanced items from various materials." 0 { TechId "precision engineering" }}
+  { Furniture {{ "ALLOY_REACTOR" }   "IRON" 100 }                    "Alloy reactor"       "Fabrication"
+        "Creates durable alloys from inferior fantasy metals." 0 { TechId "advanced alloys" }}
   
   }
   
@@ -96,4 +98,7 @@
         "Unlocks specialty abilities." 0 { TechId "advanced mutagens" }}
     { Furniture {{ "SPECIMEN_GOLD" }   "GOLD" 25 }                    "Gold specimen rack"       "Laboratory"
         "Unlocks specialty abilities." 0 { TechId "master mutagens" }}
+    { Furniture {{ "CHAMBER_EMPTY"}   "ALLOY" 50 }                    "Chamber"         "Laboratory" "Test subjects will automatically go inside it, which adds 1 population space. You can then open it to release a werecreature, but will lose the population bonus." 0 { TechId "advanced alloys" }}
+
+
   }

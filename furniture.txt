@@ -207,6 +207,53 @@
   requiresLight = true
   usageFX = WORKSHOP
 }
+"CHAMBER"
+{
+  name = "chamber"
+  viewId = { "chamber" }
+  blockMovement = true
+  usageTime = 5
+  canHideHere = true
+  fire = 0
+  strength = 500
+  requiresLight = true
+  usageFX = LABORATORY
+  usageType = UsageEffect "open" {
+	CreatureMessage "open the chamber" "opens a chamber"
+	PlaceFurniture "CHAMBER_EMPTY"
+	ChooseRandom{
+		Summon "ALPHA_WOLF" 1 none
+		Summon "WEREBOAR" 1 none
+		Summon "WERECROC" 1 none
+		Summon "WERECOW" 1 none
+		Summon "WERECHOOK" 1 none
+		Summon "WERERAT" 1 none
+		Summon "WERESHEEP" 1 none
+	}
+    }
+  populationIncrease = 1 none
+  destroyedRemains = "CHAMBER_EMPTY"
+}
+"CHAMBER_EMPTY"
+{
+  name = "empty chamber"
+  viewId = { "chamber_empty" }
+  canHideHere = true
+  usageType = UsageEffect "enter" {
+	CreatureMessage "enter the chamber" "enters a chamber"
+	PlaceFurniture "CHAMBER"
+	Suicide TURN_INVISIBLE
+    }
+  
+}
+"COMPUTER_CORE"
+{
+  name = "computer core"
+  viewId = { "computer_core" }
+  luxury = 0.7
+  layer = FLOOR
+  populationIncrease = 1 4
+}
 "SYNTHLATHE"
 {
   name = "synthlathe"
@@ -218,6 +265,18 @@
   strength = 300
   requiresLight = true
   usageFX = FORGE
+}
+"ALLOY_REACTOR"
+{
+  name = "alloy reactor"
+  viewId = { "alloy_synth" }
+  blockMovement = true
+  usageTime = 5
+  canHideHere = true
+  fire = 0
+  strength = 300
+  requiresLight = true
+  usageFX = LABORATORY
 }
 "PUNCHING_BAG"
 {
