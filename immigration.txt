@@ -20,7 +20,7 @@
     }
     {
       ids = { "CHOOK_EGG" }
-      traits = { FIGHTER }
+      traits = { WORKER NO_LIMIT INCREASE_POPULATION }
       spawnLocation = Pregnancy
       requirements = {
         { 0.0 Pregnancy }
